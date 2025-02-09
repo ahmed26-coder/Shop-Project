@@ -33,10 +33,39 @@ function Navbar() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">Exclusive</h1>
 
         <div className="hidden md:flex gap-10 text-lg font-bold absolute left-1/2 transform -translate-x-1/2">
-          <NavLink to="/" className="cursor-pointer border-b-2 border-transparent transition duration-200 hover:border-blue-500">Home</NavLink>
-          <NavLink to="/contact" className="cursor-pointer border-b-2 border-transparent transition duration-200 hover:border-blue-500">Contact</NavLink>
-          <NavLink to="/about" className="cursor-pointer border-b-2 border-transparent transition duration-200 hover:border-blue-500">About</NavLink>
-          <NavLink to="/signup" className="cursor-pointer border-b-2 border-transparent transition duration-200 hover:border-blue-500">Sign Up</NavLink>
+        <NavLink 
+  to="/" 
+  className={({ isActive }) => 
+    `cursor-pointer transition duration-200 hover:border-blue-500 ${isActive ? "font-bold underline" : ""}`
+  }
+>
+  Home
+</NavLink>
+<NavLink 
+  to="/contact" 
+  className={({ isActive }) => 
+    `cursor-pointer transition duration-200 hover:border-blue-500 ${isActive ? "font-bold underline" : ""}`
+  }
+>
+  Contact
+</NavLink>
+<NavLink 
+  to="/about" 
+  className={({ isActive }) => 
+    `cursor-pointer transition duration-200 hover:border-blue-500 ${isActive ? "font-bold underline" : ""}`
+  }
+>
+  About
+</NavLink>
+<NavLink 
+  to="/signup" 
+  className={({ isActive }) => 
+    `cursor-pointer transition duration-200 hover:border-blue-500 ${isActive ? "font-bold underline" : ""}`
+  }
+>
+  Sign Up
+</NavLink>
+
         </div>
 
         <div className="relative flex items-center gap-4 sm:gap-6 md:gap-7">
